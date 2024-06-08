@@ -1,0 +1,27 @@
+:root {
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+  --ion-toolbar-background: #f8f8f8;
+  --ion-toolbar-text-color: #000000;
+
+  /* Add other light theme variables */
+}
+
+[color-theme="dark"] {
+  --ion-background-color: #000000;
+  --ion-text-color: #ffffff;
+  --ion-toolbar-background: #1c1c1c;
+  --ion-toolbar-text-color: #ffffff;
+
+  /* Add other dark theme variables */
+}
+
+[color-theme="light"] {
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+  --ion-toolbar-background: #f8f8f8;
+  --ion-toolbar-text-color: #000000;
+  --ion-item-background: #f8f8f8;
+
+  /* Add other light theme variables, if necessary */
+}

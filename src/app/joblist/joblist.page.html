@@ -1,0 +1,13 @@
+<ion-content [fullscreen]="true">
+  <ion-col *ngFor="let job of jobs" [routerLink]="['/jobdetails', job.id]">
+    <ion-item class="custom-item">
+      <ion-avatar>
+        <ion-img [src]="job.companyLogo" [alt]="job.companyName"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{job.jobTitle}}</h2>
+        <p>{{job.companyName}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-col>
+</ion-content>

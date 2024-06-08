@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Job Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="content-container">
+    <ion-img class="centered-img" [src]="job?.companyLogo" [alt]="job?.companyName"></ion-img>
+    <p>Company</p>
+    <p>{{job?.companyName}}</p>
+    <p>Job Title</p>
+    <p>{{job?.jobTitle}}</p>
+    <p>Published Date</p>
+    <p>{{job?.pubDate}}</p>
+    <p>Location</p>
+    <p>{{job?.jobGeo}}</p>
+    <div class="button-container">
+      <ion-button (click)="toggleFavorites()">
+        {{ isFavorite ? 'Remove from Favorites' : 'Add to Favorites' }}
+      </ion-button>
+    </div>
+    <p>Description</p>
+    <div [innerHTML]="job?.jobDescription"></div>
+  </div>
+</ion-content>

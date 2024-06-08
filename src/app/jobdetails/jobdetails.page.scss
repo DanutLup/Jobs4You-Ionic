@@ -1,0 +1,22 @@
+.content-container {
+    padding: 0 20px; /* Adjust the padding as needed */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  ion-button {
+    border-radius: 20px;
+  }
+  
+  .centered-img {
+    display: block;
+    margin: 20px auto; /* Adjust margins as needed */
+    max-width: 300px; /* Adjusted width to be twice as large */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+  

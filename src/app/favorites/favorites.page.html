@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Favorites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngFor="let job of favoriteJobs" [routerLink]="['/jobdetails', job.id]">
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-img [src]="job.companyLogo" [alt]="job.companyName"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{job.jobTitle}}</h2>
+        <p>{{job.companyName}}</p>
+      </ion-label>
+      <ion-button fill="clear" color="danger" (click)="removeFromFavorites(job.id)">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </div>
+</ion-content>

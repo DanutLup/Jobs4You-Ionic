@@ -1,0 +1,18 @@
+ion-item.custom-item ion-avatar {
+    margin-right: 10px; /* Adjust this value as needed */
+  }
+
+  ion-content {
+    --background: var(--ion-background-color);
+    --color: var(--ion-text-color);
+  }
+  
+  ion-item.custom-item {
+    --background: var(--ion-item-background);
+    --color: var(--ion-item-text-color);
+  }
+  
+  ion-item.custom-item ion-label {
+    color: var(--ion-item-text-color);
+  }
+  
