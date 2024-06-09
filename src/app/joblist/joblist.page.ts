@@ -13,12 +13,26 @@ export class JoblistPage implements OnInit {
 
   constructor(private router: Router, private api: ApiService) { }
 
-  jobs: Job[] = []
-  apiResponse?: Apiresponse
+  jobs: Job[] = [];
+  apiResponse?: Apiresponse;
 
   ngOnInit() {
-    this.api.getJobs().subscribe((jobs: Job[]) => {
-      this.jobs = jobs;
-    });  }
+    // Fetch jobs from API
+    this.api.getJobs().subscribe(
+      (jobs: Job[]) => {
+        this.jobs = jobs;
+        // Store jobs in localStorage
+        localStorage.setItem('jobs', JSON.stringify(jobs));
+      },
+      (error) => {
+        console.error('Failed to fetch jobs from API', error);
+        // If API request fails, load jobs from localStorage
+        const storedJobs = localStorage.getItem('jobs');
+        if (storedJobs) {
+          this.jobs = JSON.parse(storedJobs);
+        }
+      }
+    );
+  }
 
 }
